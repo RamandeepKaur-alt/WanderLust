@@ -1,4 +1,8 @@
-# WanderLust 🌍
+# WanderLust 
+
+🌐 **Live Demo:** [Visit WanderLust](https://majorproject-t36a.onrender.com/)
+> Note: The app may take 20–30 seconds to wake up on first load (free hosting).
+
 
 **WanderLust** is a full-stack travel-stay listing platform inspired by Airbnb, built to demonstrate production-style backend and full-stack engineering skills.
 
@@ -6,7 +10,7 @@ Users can browse places, create and manage property listings, upload listing ima
 
 ---
 
-## ✨ Features
+##  Features
 
 - **User Authentication & Sessions**
   - Sign up, log in, and log out
@@ -36,7 +40,18 @@ Users can browse places, create and manage property listings, upload listing ima
 
 ---
 
-## 🧰 Tech Stack
+##  How WanderLust Works
+
+1. Users authenticate using Passport-based session authentication.
+2. Authenticated users can create listings with location data.
+3. Location is converted to GeoJSON coordinates using Mapbox.
+4. Images are uploaded via Multer and stored securely on Cloudinary.
+5. Listings and reviews are stored in MongoDB using Mongoose schemas.
+6. Ownership middleware ensures only creators can modify content.
+7. Server-side validation with Joi protects against invalid input.
+
+
+## Tech Stack
 
 ### Backend
 - Node.js
@@ -140,17 +155,8 @@ http://localhost:8080
 
 ---
 
-## 🌱 Seed Sample Data (Optional)
 
-```bash
-node init/index.js
-```
-
-> Note: The seed script uses a local MongoDB URL by default. Update `init/index.js` if needed.
-
----
-
-## 🔐 Authorization Rules
+## Authorization Rules
 
 - Must be logged in to create listings/reviews
 - Only listing owner can edit/delete listing
@@ -158,7 +164,7 @@ node init/index.js
 
 ---
 
-## 🛣️ Key Routes
+##  Key Routes
 
 - `GET /listings` — list all listings
 - `GET /listings/new` — new listing form (auth required)
@@ -174,17 +180,7 @@ node init/index.js
 
 ---
 
-## 💼 Recruiter Highlights
 
-This project demonstrates:
-
-- Clean **MVC architecture** and modular Express design
-- Real-world **authentication + authorization** patterns
-- Secure input handling with **Joi validation**
-- Third-party integration with **Cloudinary + Mapbox**
-- Practical full-stack CRUD workflows with relational MongoDB references
-
----
 
 ## 🔮 Future Improvements
 
@@ -198,4 +194,4 @@ This project demonstrates:
 
 ## 👨‍💻 Author
 
-Built as a full-stack portfolio project to showcase practical backend, cloud integration, and web application architecture skills.
+Built and maintained by Ramandeep Kaur as a production-style full-stack application.
